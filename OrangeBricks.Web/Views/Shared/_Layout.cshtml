@@ -30,6 +30,10 @@
                             <li>@Html.ActionLink("Create Listing", "Create", "Property")</li>
                             <li>@Html.ActionLink("My Properties", "MyProperties", "Property")</li>
                         }
+                        if (User.IsInRole("Buyer"))
+                        {
+                            <li>@Html.ActionLink("My Offers","MyOffers","Offers")</li>
+                        }
                     }
                 </ul>
                 @Html.Partial("_LoginPartial")

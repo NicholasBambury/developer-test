@@ -6,5 +6,6 @@ namespace OrangeBricks.Web.Controllers.Property.ViewModels
         public string StreetName { get; set; }
         public int Offer { get; set; }
         public int PropertyId { get; set; }
+        public string BuyerUserId { get; set; }
     }
 }
