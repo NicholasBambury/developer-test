@@ -33,7 +33,9 @@
                         if (User.IsInRole("Buyer"))
                         {
                             <li>@Html.ActionLink("My Offers","MyOffers","Offers")</li>
+                            <li>@Html.ActionLink("My Viewings", "MyViewings", "Property")</li>
                         }
+
                     }
                 </ul>
                 @Html.Partial("_LoginPartial")
