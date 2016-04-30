@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
+﻿using System.Linq;
 using OrangeBricks.Web.Models;
 using OrangeBricks.Web.Controllers.Offers.ViewModels;
 
@@ -32,8 +30,6 @@ namespace OrangeBricks.Web.Controllers.Offers.Builders
                     BuyerUserId = x.BuyerUserId,
                     StreetName = GetPropertyStreetName(x.PropertyId)
                 }),
-
-                
             };
         }
 
