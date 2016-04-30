@@ -1,11 +1,10 @@
 ﻿using OrangeBricks.Web.Controllers.Property.ViewModels;
+using OrangeBricks.Web.Controllers.Viewing.ViewModels;
 using OrangeBricks.Web.Models;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 
-namespace OrangeBricks.Web.Controllers.Property.Builders
+namespace OrangeBricks.Web.Controllers.Viewing.Builders
 {
     public class BookedViewingsViewModelBuilder
     {
@@ -28,7 +27,7 @@ namespace OrangeBricks.Web.Controllers.Property.Builders
             };
         }
 
-        private IEnumerable<BookViewingViewModel> BuildBookViewing(List<Viewing> viewings)
+        private IEnumerable<BookViewingViewModel> BuildBookViewing(List<Models.Viewing> viewings)
         {
             List<BookViewingViewModel> bookViewings = new List<BookViewingViewModel>();
 

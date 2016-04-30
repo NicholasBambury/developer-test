@@ -181,15 +181,15 @@
     <Compile Include="Controllers\Offers\Commands\RejectOfferCommandHandler.cs" />
     <Compile Include="Controllers\Offers\OffersController.cs" />
     <Compile Include="Controllers\Offers\ViewModels\OffersOnPropertyViewModel.cs" />
-    <Compile Include="Controllers\Property\Builders\BookedViewingsViewModelBuilder.cs" />
-    <Compile Include="Controllers\Property\Builders\BookViewingViewModelBuilder.cs" />
+    <Compile Include="Controllers\Viewing\Builders\BookedViewingsViewModelBuilder.cs" />
+    <Compile Include="Controllers\Viewing\Builders\BookViewingViewModelBuilder.cs" />
     <Compile Include="Controllers\Property\Builders\MakeOfferViewModelBuilder.cs" />
     <Compile Include="Controllers\Property\Builders\MyPropertiesViewModelBuilder.cs" />
-    <Compile Include="Controllers\Property\Builders\MyViewingsViewModelBuilder.cs" />
+    <Compile Include="Controllers\Viewing\Builders\MyViewingsViewModelBuilder.cs" />
     <Compile Include="Controllers\Property\Builders\PropertiesQuery.cs" />
     <Compile Include="Controllers\Property\Builders\PropertiesViewModelBuilder.cs" />
-    <Compile Include="Controllers\Property\Commands\BookViewingCommand.cs" />
-    <Compile Include="Controllers\Property\Commands\BookViewingCommandHandler.cs" />
+    <Compile Include="Controllers\Viewing\Commands\BookViewingCommand.cs" />
+    <Compile Include="Controllers\Viewing\Commands\BookViewingCommandHandler.cs" />
     <Compile Include="Controllers\Property\Commands\CreatePropertyCommand.cs" />
     <Compile Include="Controllers\Property\Commands\CreatePropertyCommandHandler.cs" />
     <Compile Include="Controllers\Property\Commands\ListPropertyCommand.cs" />
@@ -197,11 +197,12 @@
     <Compile Include="Controllers\Property\Commands\MakeOfferCommand.cs" />
     <Compile Include="Controllers\Property\Commands\MakeOfferCommandHandler.cs" />
     <Compile Include="Controllers\Property\PropertyController.cs" />
-    <Compile Include="Controllers\Property\ViewModels\BookViewingViewModel.cs" />
+    <Compile Include="Controllers\Viewing\ViewingController.cs" />
+    <Compile Include="Controllers\Viewing\ViewModels\BookViewingViewModel.cs" />
     <Compile Include="Controllers\Property\ViewModels\CreatePropertyViewModel.cs" />
     <Compile Include="Controllers\Property\ViewModels\MakeOfferViewModel.cs" />
     <Compile Include="Controllers\Property\ViewModels\MyPropertiesViewModel.cs" />
-    <Compile Include="Controllers\Property\ViewModels\MyViewingsViewModel.cs" />
+    <Compile Include="Controllers\Viewing\ViewModels\MyViewingsViewModel.cs" />
     <Compile Include="Controllers\Property\ViewModels\PropertiesViewModel.cs" />
     <Compile Include="Controllers\Property\ViewModels\PropertyViewModel.cs" />
     <Compile Include="Global.asax.cs">
@@ -318,9 +319,9 @@
     <Content Include="Views\Offers\OnProperty.cshtml" />
     <None Include="Views\Account\UnAuthorized.cshtml" />
     <Content Include="Views\Offers\MyOffers.cshtml" />
-    <Content Include="Views\Property\BookViewing.cshtml" />
-    <Content Include="Views\Property\ViewingsBooked.cshtml" />
-    <Content Include="Views\Property\MyViewings.cshtml" />
+    <Content Include="Views\Viewing\BookViewing.cshtml" />
+    <Content Include="Views\Viewing\ViewingsBooked.cshtml" />
+    <Content Include="Views\Viewing\MyViewings.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

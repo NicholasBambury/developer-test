@@ -18,7 +18,7 @@
 
     <p><a href="@Url.Action("OnProperty", "Offers", new {id = property.Id})">View offers that have been made on this property...</a></p>
     
-    <p><a href="@Url.Action("ViewingsBooked", "Property", new {id = property.Id})">Viewing booked on this property...</a></p>
+    <p><a href="@Url.Action("ViewingsBooked", "Viewing", new {id = property.Id})">Viewing booked on this property...</a></p>
 
     if (!property.IsListedForSale)
     {

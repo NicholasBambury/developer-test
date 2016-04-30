@@ -1,7 +1,8 @@
-﻿using System;
+﻿using OrangeBricks.Web.Controllers.Property.ViewModels;
+using System;
 using System.Collections.Generic;
 
-namespace OrangeBricks.Web.Controllers.Property.ViewModels
+namespace OrangeBricks.Web.Controllers.Viewing.ViewModels
 {
     public class BookViewingViewModel
     {

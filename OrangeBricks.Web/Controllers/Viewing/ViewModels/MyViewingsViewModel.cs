@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-namespace OrangeBricks.Web.Controllers.Property.ViewModels
+namespace OrangeBricks.Web.Controllers.Viewing.ViewModels
 {
     public class MyViewingsViewModel
     {

@@ -1,11 +1,11 @@
-﻿@model OrangeBricks.Web.Controllers.Property.ViewModels.BookViewingViewModel
+﻿@model OrangeBricks.Web.Controllers.Viewing.ViewModels.BookViewingViewModel
 @{
     ViewBag.Title = "Book Viewing";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <h2>@ViewBag.Title</h2>
 <p>Book a viewing for the @Model.PropertyType on @Model.StreetName?</p>
-@using (Html.BeginForm("BookViewing", "Property", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+@using (Html.BeginForm("BookViewing", "Viewing", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
 {
     <div class="form-group">
         @Html.LabelFor(m => m.ViewingDateTime, "Date and Time", new { @class = "col-md-2 control-label" })
