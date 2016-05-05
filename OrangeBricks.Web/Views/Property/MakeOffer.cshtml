@@ -1,0 +1,26 @@
+﻿@model OrangeBricks.Web.Controllers.Property.ViewModels.MakeOfferViewModel
+
+@{
+    ViewBag.Title = "Make Offer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Make Offer</h2>
+
+<p>How much would you like to offer for the @Model.PropertyType on @Model.StreetName?</p>
+
+@using (Html.BeginForm("MakeOffer", "Property", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Offer, "Offer in GBP", new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.Hidden("PropertyId", Model.PropertyId)
+            @Html.TextBoxFor(m => m.Offer, new {@class = "form-control"})
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" class="btn btn-default" value="Make Offer" />
+        </div>
+    </div>
+}

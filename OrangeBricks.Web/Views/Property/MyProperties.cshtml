@@ -1,0 +1,30 @@
+﻿@model OrangeBricks.Web.Controllers.Property.ViewModels.MyPropertiesViewModel
+
+@{
+    ViewBag.Title = "My Properties";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>My Properties</h2>
+
+<p>Here is a list of your properties:</p>
+
+@foreach (var property in Model.Properties)
+{
+    <hr />
+    <h3>@property.StreetName</h3>
+    <p>@property.NumberOfBedrooms bedroom @property.PropertyType</p>
+    <p>@property.Description</p>
+
+    <a href="@Url.Action("OnProperty", "Offers", new {id = property.Id})">View offers that have been made on this property...</a>
+        
+    if (!property.IsListedForSale)
+    {
+        using (Html.BeginForm("ListForSale", "Property"))
+        {
+            @Html.Hidden("PropertyId", property.Id)
+            <input class="btn btn-primary" type="submit" value="List Property For Sale" />
+        }
+    }
+
+}

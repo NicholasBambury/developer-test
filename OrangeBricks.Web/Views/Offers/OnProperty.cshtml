@@ -1,0 +1,56 @@
+﻿@model OrangeBricks.Web.Controllers.Offers.ViewModels.OffersOnPropertyViewModel
+
+@{
+    ViewBag.Title = "Offers on Your Property";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>Here you can see the offers that have been made on your property.</p>
+
+<p><strong>Property type:</strong> @Model.PropertyType</p>
+<p><strong>Number of bedrooms:</strong> @Model.NumberOfBedrooms</p>
+<p><strong>Street name:</strong> @Model.StreetName</p>
+
+@if (Model.HasOffers)
+{
+    <p>There are @Model.Offers.Count() offers on this property...</p>
+    
+    foreach (var offer in Model.Offers)
+    {
+        <hr/>
+        <div>
+            <p><strong>Offer Amount: </strong> £@offer.Amount</p>
+            <p><strong>Offer Made At: </strong> @offer.CreatedAt.ToLongTimeString() on @offer.CreatedAt.ToShortDateString()</p>
+            <p><strong>Status: </strong> @offer.Status</p>
+        </div>
+
+        if (offer.IsPending)
+        {
+            using (Html.BeginForm("Accept", "Offers"))
+            {
+                @Html.Hidden("PropertyId", Model.PropertyId)
+                @Html.Hidden("OfferId", offer.Id)
+                <p>
+                    <input type="submit" class="btn btn-default" value="Accept Offer" />
+                </p>
+            }
+            using (Html.BeginForm("Reject", "Offers"))
+            {
+                @Html.Hidden("PropertyId", Model.PropertyId)
+                @Html.Hidden("OfferId", offer.Id)
+                <p>
+                    <input type="submit" class="btn btn-default" value="Reject Offer" />
+                </p>
+            }
+        }
+
+    }
+}
+else
+{
+    <div class="alert alert-info" role="alert">
+        This property has no offers yet!
+    </div>
+}

@@ -1,0 +1,36 @@
+﻿@model OrangeBricks.Web.Controllers.Property.ViewModels.PropertiesViewModel
+
+@{
+    ViewBag.Title = "Properties For Sale";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Properties For Sale</h2>
+
+@using (Html.BeginForm("Index", "Property", FormMethod.Get, new { @class = "form-horizontal" }))
+{
+    <div class="form-group form-group-lg">
+        @Html.LabelFor(x => x.Search, "Search:", new { @class = "col-sm-2 control-label" })
+        <div class="col-sm-8">
+            @Html.TextBoxFor(m => m.Search, new { @class = "form-control", @placeholder = "Search by street or description..." })
+        </div>
+    <div class="col-sm-2">
+        <button type="submit" class="btn btn-default">Search</button>
+    </div>
+    </div>
+    
+}
+
+<p>@Model.Properties.Count properties matching your criteria...</p>
+
+@foreach (var property in Model.Properties)
+{
+    <hr />
+    <h3>@property.StreetName</h3>
+    <p>@property.NumberOfBedrooms bedroom @property.PropertyType</p>
+    <p>@property.Description</p>
+
+    <a href="@Url.Action("MakeOffer", "Property", new {id = property.Id})" class="btn btn-primary">
+        Make Offer
+    </a>
+}
