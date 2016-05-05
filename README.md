@@ -10,13 +10,13 @@ The existing web application supports two types of customer. Sellers are able to
 
 We need you to extend the offer functionality of the web application so that when a seller accepts an offer the buyer that placed the offer can see that their offer has been accepted.
 
-User Story: As a buyer I want to see when my offer has been accepted so that I can proceed with the property purchase.
+**User Story:** *As a buyer I want to see when my offer has been accepted so that I can proceed with the property purchase.*
 
 ### Objective 2 – Add a new feature
 
 We need you to add the ability for a buyer to book a viewing. It’s unlikely a customer would want to make an offer on a property without booking a viewing.
 
-User Story: As a buyer I want to book a viewing appointment at a property so that I can determine whether I would like to make an offer.
+**User Story:** *As a buyer I want to book a viewing appointment at a property so that I can determine whether I would like to make an offer.*
 
 ### Objective 3 - Review the existing code
 
