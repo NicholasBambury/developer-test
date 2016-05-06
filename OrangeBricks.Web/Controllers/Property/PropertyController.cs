@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
+using OrangeBricks.Web.Attributes;
 using OrangeBricks.Web.Controllers.Property.Builders;
 using OrangeBricks.Web.Controllers.Property.Commands;
 using OrangeBricks.Web.Controllers.Property.ViewModels;
@@ -27,7 +28,7 @@ namespace OrangeBricks.Web.Controllers.Property
             return View(viewModel);
         }
 
-        [Authorize(Roles = "Seller")]
+        [OrangeBricksAuthorize(Roles = "Seller")]
         public ActionResult Create()
         {
             var viewModel = new CreatePropertyViewModel();
@@ -39,7 +40,7 @@ namespace OrangeBricks.Web.Controllers.Property
             return View(viewModel);
         }
 
-        [Authorize(Roles = "Seller")]
+        [OrangeBricksAuthorize(Roles = "Seller")]
         [HttpPost]
         public ActionResult Create(CreatePropertyCommand command)
         {
@@ -52,7 +53,7 @@ namespace OrangeBricks.Web.Controllers.Property
             return RedirectToAction("MyProperties");
         }
 
-        [Authorize(Roles = "Seller")]
+        [OrangeBricksAuthorize(Roles = "Seller")]
         public ActionResult MyProperties()
         {
             var builder = new MyPropertiesViewModelBuilder(_context);
@@ -62,7 +63,7 @@ namespace OrangeBricks.Web.Controllers.Property
         }
 
         [HttpPost]
-        [Authorize(Roles = "Seller")]
+        [OrangeBricksAuthorize(Roles = "Seller")]
         public ActionResult ListForSale(ListPropertyCommand command)
         {
             var handler = new ListPropertyCommandHandler(_context);
@@ -72,7 +73,7 @@ namespace OrangeBricks.Web.Controllers.Property
             return RedirectToAction("MyProperties");
         }
 
-        [Authorize(Roles = "Buyer")]
+        [OrangeBricksAuthorize(Roles = "Buyer")]
         public ActionResult MakeOffer(int id)
         {
             var builder = new MakeOfferViewModelBuilder(_context);
@@ -81,7 +82,7 @@ namespace OrangeBricks.Web.Controllers.Property
         }
 
         [HttpPost]
-        [Authorize(Roles = "Buyer")]
+        [OrangeBricksAuthorize(Roles = "Buyer")]
         public ActionResult MakeOffer(MakeOfferCommand command)
         {
             var handler = new MakeOfferCommandHandler(_context);

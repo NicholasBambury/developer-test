@@ -169,6 +169,7 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Attributes\OrangeBricksAuthorizeAttribute.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\Offers\Builders\OffersOnPropertyViewModelBuilder.cs" />
@@ -289,6 +290,7 @@
     <Content Include="Views\Property\Index.cshtml" />
     <Content Include="Views\Property\MakeOffer.cshtml" />
     <Content Include="Views\Offers\OnProperty.cshtml" />
+    <None Include="Views\Account\UnAuthorized.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
