@@ -1,11 +1,12 @@
 ﻿using System.Web.Mvc;
+using OrangeBricks.Web.Attributes;
 using OrangeBricks.Web.Controllers.Offers.Builders;
 using OrangeBricks.Web.Controllers.Offers.Commands;
 using OrangeBricks.Web.Models;
 
 namespace OrangeBricks.Web.Controllers.Offers
 {
-    [Authorize(Roles = "Seller")]
+    [OrangeBricksAuthorize(Roles = "Seller")]
     public class OffersController : Controller
     {
         private readonly IOrangeBricksContext _context;

@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Not Authorized";
+}
+
+<h2>@ViewBag.Title.</h2>
+<div class="row">
+    <div class="col-md-12">
+        <h4>You do not have the right permissions.</h4>
+        <hr />
+        <p>
+            Please click @Html.ActionLink("here", "Login") to log in with a different account.
+        </p>
+    </div>
+</div>
