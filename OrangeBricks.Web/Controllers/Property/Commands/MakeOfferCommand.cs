@@ -5,5 +5,7 @@ namespace OrangeBricks.Web.Controllers.Property.Commands
         public int PropertyId { get; set; }
 
         public int Offer { get; set; }
+
+        public string BuyerUserId { get; set; }
     }
 }
